@@ -62,11 +62,9 @@ export function Navbar() {
               <Link href="/account" className="text-lg font-medium transition-colors hover:text-primary">
                 내 계정
               </Link>
-              {user?.isAdmin && (
-                <Link href="/admin" className="text-lg font-medium transition-colors hover:text-primary">
-                  관리자
-                </Link>
-              )}
+              <Link href="/admin" className="text-lg font-medium transition-colors hover:text-primary">
+                관리자
+              </Link>
               {!user ? (
                 <Link href="/login" className="text-lg font-medium transition-colors hover:text-primary">
                   로그인
@@ -103,14 +101,13 @@ export function Navbar() {
           >
             내 계정
           </Link>
-          {user?.isAdmin && (
-            <Link
-              href="/admin"
-              className={`transition-colors hover:text-primary ${isActive("/admin") ? "text-primary" : ""}`}
-            >
-              관리자
-            </Link>
-          )}
+          <Link
+            href="/admin"
+            className={`transition-colors hover:text-primary ${isActive("/admin") ? "text-primary" : ""}`}
+          >
+            관리자
+          </Link>
+          
         </nav>
 
         <div className="flex items-center ml-auto">

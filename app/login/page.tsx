@@ -42,7 +42,16 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16 flex justify-center">
+    <div className="container mx-auto px-4 py-16 flex justify-center relative">
+      <div className="fixed top-4 right-4 md:right-8 bg-black/80 text-white p-4 rounded-lg shadow-lg backdrop-blur-sm max-w-[280px] text-sm z-50">
+        <h3 className="font-semibold mb-2">🔑 테스트 계정</h3>
+        <div className="space-y-1">
+          <p><span className="text-gray-400">이메일:</span> test@test.com</p>
+          <p><span className="text-gray-400">비밀번호:</span> test</p>
+        </div>
+        <p className="mt-2 text-xs text-gray-400">위 계정으로 테스트 로그인이 가능합니다</p>
+      </div>
+
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold">로그인</CardTitle>
