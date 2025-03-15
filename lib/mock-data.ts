@@ -1,0 +1,300 @@
+import type { Product, Order, User } from "./types"
+
+// 모의 상품 데이터
+export const mockProducts: Product[] = [
+  {
+    id: "p1",
+    name: "오버사이즈 티셔츠",
+    description: "편안한 착용감의 오버사이즈 티셔츠입니다. 다양한 스타일링에 활용하기 좋습니다.",
+    price: 29000,
+    originalPrice: 35000,
+    discount: 17,
+    category: "남성",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 25,
+    isNew: true,
+  },
+  {
+    id: "p2",
+    name: "슬림핏 청바지",
+    description: "편안한 착용감과 세련된 디자인의 슬림핏 청바지입니다.",
+    price: 59000,
+    originalPrice: 0,
+    discount: 0,
+    category: "남성",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 15,
+    isNew: false,
+  },
+  {
+    id: "p3",
+    name: "캐주얼 셔츠",
+    description: "일상에서 편하게 입을 수 있는 캐주얼 셔츠입니다.",
+    price: 45000,
+    originalPrice: 55000,
+    discount: 18,
+    category: "남성",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 20,
+    isNew: false,
+  },
+  {
+    id: "p4",
+    name: "니트 스웨터",
+    description: "부드러운 소재의 니트 스웨터입니다. 가을, 겨울에 착용하기 좋습니다.",
+    price: 65000,
+    originalPrice: 0,
+    discount: 0,
+    category: "여성",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 10,
+    isNew: true,
+  },
+  {
+    id: "p5",
+    name: "플리스 자켓",
+    description: "따뜻하고 가벼운 플리스 자켓입니다. 간절기에 활용하기 좋습니다.",
+    price: 89000,
+    originalPrice: 99000,
+    discount: 10,
+    category: "여성",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 8,
+    isNew: true,
+  },
+  {
+    id: "p6",
+    name: "가죽 스니커즈",
+    description: "편안한 착용감의 가죽 스니커즈입니다. 다양한 스타일링에 어울립니다.",
+    price: 79000,
+    originalPrice: 0,
+    discount: 0,
+    category: "신발",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 12,
+    isNew: false,
+  },
+  {
+    id: "p7",
+    name: "캔버스 백팩",
+    description: "실용적이고 스타일리시한 캔버스 백팩입니다.",
+    price: 49000,
+    originalPrice: 59000,
+    discount: 17,
+    category: "액세서리",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 18,
+    isNew: false,
+  },
+  {
+    id: "p8",
+    name: "울 코트",
+    description: "고급스러운 울 소재의 코트입니다. 겨울철 따뜻하게 착용할 수 있습니다.",
+    price: 159000,
+    originalPrice: 189000,
+    discount: 16,
+    category: "여성",
+    image: "/placeholder.svg?height=400&width=400",
+    stock: 5,
+    isNew: true,
+  },
+]
+
+// 모의 주문 데이터
+export const mockOrders: Order[] = [
+  {
+    id: "ORD-001",
+    customer: "홍길동",
+    date: "2023-05-15",
+    total: 88000,
+    status: "배송완료",
+    items: 2,
+  },
+  {
+    id: "ORD-002",
+    customer: "김철수",
+    date: "2023-05-16",
+    total: 159000,
+    status: "배송중",
+    items: 1,
+  },
+  {
+    id: "ORD-003",
+    customer: "이영희",
+    date: "2023-05-17",
+    total: 124000,
+    status: "결제완료",
+    items: 3,
+  },
+  {
+    id: "ORD-004",
+    customer: "박지민",
+    date: "2023-05-18",
+    total: 49000,
+    status: "배송준비",
+    items: 1,
+  },
+  {
+    id: "ORD-005",
+    customer: "최유진",
+    date: "2023-05-19",
+    total: 138000,
+    status: "결제대기",
+    items: 2,
+  },
+  {
+    id: "ORD-006",
+    customer: "정민수",
+    date: "2023-05-20",
+    total: 79000,
+    status: "취소",
+    items: 1,
+  },
+]
+
+// 모의 사용자 데이터
+export const mockUsers: User[] = [
+  {
+    id: "u1",
+    name: "홍길동",
+    email: "hong@example.com",
+    phone: "010-1234-5678",
+    birthdate: "1990-01-15",
+    joinDate: "2023-01-10",
+    lastLogin: "2023-05-20",
+    orders: [
+      {
+        id: "ORD-001",
+        date: "2023-05-15",
+        total: 88000,
+        itemCount: 2,
+        status: "배송완료",
+      },
+    ],
+  },
+  {
+    id: "u2",
+    name: "김철수",
+    email: "kim@example.com",
+    phone: "010-2345-6789",
+    birthdate: "1985-05-20",
+    joinDate: "2023-02-15",
+    lastLogin: "2023-05-19",
+    orders: [
+      {
+        id: "ORD-002",
+        date: "2023-05-16",
+        total: 159000,
+        itemCount: 1,
+        status: "배송중",
+      },
+    ],
+  },
+  {
+    id: "u3",
+    name: "이영희",
+    email: "lee@example.com",
+    phone: "010-3456-7890",
+    birthdate: "1992-11-08",
+    joinDate: "2023-03-05",
+    lastLogin: "2023-05-18",
+    orders: [
+      {
+        id: "ORD-003",
+        date: "2023-05-17",
+        total: 124000,
+        itemCount: 3,
+        status: "결제완료",
+      },
+    ],
+  },
+  {
+    id: "u4",
+    name: "박지민",
+    email: "park@example.com",
+    phone: "010-4567-8901",
+    birthdate: "1988-07-25",
+    joinDate: "2023-04-10",
+    lastLogin: "2023-05-17",
+    orders: [
+      {
+        id: "ORD-004",
+        date: "2023-05-18",
+        total: 49000,
+        itemCount: 1,
+        status: "배송준비",
+      },
+    ],
+  },
+  {
+    id: "u5",
+    name: "최유진",
+    email: "choi@example.com",
+    phone: "010-5678-9012",
+    birthdate: "1995-03-12",
+    joinDate: "2023-05-01",
+    lastLogin: "2023-05-16",
+    orders: [
+      {
+        id: "ORD-005",
+        date: "2023-05-19",
+        total: 138000,
+        itemCount: 2,
+        status: "결제대기",
+      },
+    ],
+  },
+]
+
+// 모의 사용자 데이터 (로그인한 사용자)
+export const mockUser: User = {
+  id: "u1",
+  name: "홍길동",
+  email: "hong@example.com",
+  phone: "010-1234-5678",
+  birthdate: "1990-01-15",
+  joinDate: "2023-01-10",
+  lastLogin: "2023-05-20",
+  orders: [
+    {
+      id: "ORD-001",
+      date: "2023-05-15",
+      total: 88000,
+      itemCount: 2,
+      status: "배송완료",
+    },
+    {
+      id: "ORD-007",
+      date: "2023-04-20",
+      total: 65000,
+      itemCount: 1,
+      status: "배송완료",
+    },
+    {
+      id: "ORD-012",
+      date: "2023-03-10",
+      total: 138000,
+      itemCount: 3,
+      status: "배송완료",
+    },
+  ],
+}
+
+// 모의 매출 데이터
+export const mockSalesData = [
+  { name: "1월", value: 1200000 },
+  { name: "2월", value: 1500000 },
+  { name: "3월", value: 1800000 },
+  { name: "4월", value: 1600000 },
+  { name: "5월", value: 2100000 },
+]
+
+// 모의 주문 데이터
+export const mockOrdersData = [
+  { name: "1월", value: 45 },
+  { name: "2월", value: 52 },
+  { name: "3월", value: 61 },
+  { name: "4월", value: 58 },
+  { name: "5월", value: 72 },
+]
+
