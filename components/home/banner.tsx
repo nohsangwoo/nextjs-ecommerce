@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export function Banner() {
   return (
     <div className="relative w-full h-[500px] md:h-[600px]">
-      <Image src="/placeholder.svg?height=600&width=1200" alt="Banner image" fill className="object-cover" priority />
+      <Image src="/main/1.webp" alt="Banner image" fill className="object-cover" priority />
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">새로운 시즌, 새로운 스타일</h1>
@@ -20,7 +20,7 @@ export function Banner() {
             asChild
             size="lg"
             variant="outline"
-            className="text-white border-white hover:bg-white/20 dark:text-white dark:border-white dark:hover:bg-white/20 bg-black/60 hover:bg-black/70"
+            className="text-white border-white hover:bg-white/20 dark:text-white dark:border-white dark:hover:bg-white/20 bg-black/60 "
           >
             <Link href="/products?category=new">신상품 보기</Link>
           </Button>

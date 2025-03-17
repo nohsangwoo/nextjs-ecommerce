@@ -5,22 +5,22 @@ const categories = [
   {
     id: "men",
     name: "남성",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/category/men.webp",
   },
   {
     id: "women",
     name: "여성",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/category/women.webp",
   },
   {
     id: "accessories",
     name: "액세서리",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/category/accessories.webp",
   },
   {
     id: "shoes",
     name: "신발",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/category/shoes.webp",
   },
 ]
 
